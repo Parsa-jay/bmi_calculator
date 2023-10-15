@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -29,11 +31,99 @@ class _MyAppState extends State<MyApp> {
             children: [
               // first row
 
+              Container(
+                height: 140,
+                child: Row(
+                  children: [
+                    Flexible(
+                      fit: FlexFit.tight,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                            color: Color.fromRGBO(35, 32, 32, 1),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(8.0)),
+                            boxShadow: <BoxShadow>[
+                              BoxShadow(
+                                color: Color.fromRGBO(88, 88, 88, 0.9),
+                                offset: Offset(2, 2),
+                                blurRadius: 8,
+                              )
+                            ]),
+                        margin: const EdgeInsets.fromLTRB(8, 8, 4, 8),
+                        padding: const EdgeInsets.all(20),
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Column(children: [
+                            SvgPicture.asset(
+                              "assets/mars.svg",
+                              width: 50,
+                              colorFilter: ColorFilter.mode(
+                                  Colors.white, BlendMode.srcIn),
+                            ),
+                            Text(
+                              'male',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ]),
+                        ),
+                      ),
+                    ),
+                    Flexible(
+                      fit: FlexFit.tight,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                            color: Color.fromRGBO(35, 32, 32, 1),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(8.0)),
+                            boxShadow: <BoxShadow>[
+                              BoxShadow(
+                                color: Color.fromRGBO(88, 88, 88, 0.9),
+                                offset: Offset(2, 2),
+                                blurRadius: 8,
+                              )
+                            ]),
+                        margin: const EdgeInsets.fromLTRB(8, 8, 4, 8),
+                        padding: const EdgeInsets.all(20),
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Column(children: [
+                            SvgPicture.asset(
+                              "assets/venus.svg",
+                              width: 50,
+                              colorFilter: ColorFilter.mode(
+                                  Colors.white, BlendMode.srcIn),
+                            ),
+                            Text(
+                              'female',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ]),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+
               // second row
+              Container(
+                height: 140,
+                child: Row(),
+              ),
 
               // third row
+              Container(
+                height: 140,
+                color: Colors.yellow,
+                child: Row(),
+              ),
 
               // forth row
+              Container(
+                height: 140,
+                color: Colors.purple,
+                child: Row(),
+              )
             ],
           ),
         );
