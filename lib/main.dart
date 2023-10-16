@@ -15,16 +15,24 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Color maleButtonColor = Colors.redAccent;
+  Color femaleButtonColor = Colors.white;
+  final Color sexButtonDefultColor = Colors.white;
+  final Color onPressedColor = Colors.redAccent;
+  String userSex = 'male';
+
   @override
   Widget build(BuildContext context) {
+    final double screenHeight = MediaQuery.of(context).size.height;
+    final double screenWidth = MediaQuery.of(context).size.width;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Builder(builder: (context) {
         return Scaffold(
           appBar: AppBar(
-            title: Text('BMI CALCULATOR'),
+            title: const Text('BMI CALCULATOR'),
             centerTitle: true,
-            backgroundColor: Color.fromRGBO(58, 53, 53, 1),
+            backgroundColor: const Color.fromRGBO(58, 53, 53, 1),
             elevation: 2,
           ),
           body: Column(
@@ -35,6 +43,7 @@ class _MyAppState extends State<MyApp> {
                 height: 140,
                 child: Row(
                   children: [
+                    //male button
                     Flexible(
                       fit: FlexFit.tight,
                       child: Container(
@@ -52,22 +61,30 @@ class _MyAppState extends State<MyApp> {
                         margin: const EdgeInsets.fromLTRB(8, 8, 4, 8),
                         padding: const EdgeInsets.all(20),
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            //button colors turns red, user sex change to male
+                            setState(() {
+                              maleButtonColor = onPressedColor;
+                              femaleButtonColor = sexButtonDefultColor;
+                              userSex = 'male';
+                            });
+                          },
                           child: Column(children: [
                             SvgPicture.asset(
                               "assets/mars.svg",
                               width: 50,
                               colorFilter: ColorFilter.mode(
-                                  Colors.white, BlendMode.srcIn),
+                                  maleButtonColor, BlendMode.srcIn),
                             ),
                             Text(
                               'male',
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(color: maleButtonColor),
                             ),
                           ]),
                         ),
                       ),
                     ),
+                    //female button
                     Flexible(
                       fit: FlexFit.tight,
                       child: Container(
@@ -85,17 +102,24 @@ class _MyAppState extends State<MyApp> {
                         margin: const EdgeInsets.fromLTRB(8, 8, 4, 8),
                         padding: const EdgeInsets.all(20),
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            //button colors turns red, user sex change to female
+                            setState(() {
+                              femaleButtonColor = onPressedColor;
+                              maleButtonColor = sexButtonDefultColor;
+                              userSex = 'female';
+                            });
+                          },
                           child: Column(children: [
                             SvgPicture.asset(
                               "assets/venus.svg",
                               width: 50,
                               colorFilter: ColorFilter.mode(
-                                  Colors.white, BlendMode.srcIn),
+                                  femaleButtonColor, BlendMode.srcIn),
                             ),
                             Text(
                               'female',
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(color: femaleButtonColor),
                             ),
                           ]),
                         ),
