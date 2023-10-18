@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'age_and_weight.dart';
 
 class Body extends StatefulWidget {
   const Body({super.key});
@@ -120,9 +121,8 @@ class _BodyState extends State<Body> {
 
         // third row
         Container(
-          height: 140,
-          color: Colors.yellow,
-          child: Row(),
+          height: 160,
+          child: const AgeAndWeight(),
         ),
 
         // forth row
