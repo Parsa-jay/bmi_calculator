@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 
 class AgeAndWeight extends StatefulWidget {
   const AgeAndWeight({super.key});
-
+  static int usersWeight = 65;
+  static int usersAge = 25;
   @override
   State<AgeAndWeight> createState() => _AgeAndWeightState();
 }
 
 class _AgeAndWeightState extends State<AgeAndWeight> {
-  int usersWeight = 65;
-  int usersAge = 25;
   //----------------------------------------
   @override
   Widget build(BuildContext context) {
@@ -44,7 +43,7 @@ class _AgeAndWeightState extends State<AgeAndWeight> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    usersWeight.toString(),
+                    AgeAndWeight.usersWeight.toString(),
                     style: const TextStyle(color: Colors.white, fontSize: 18),
                   ),
                   const SizedBox(
@@ -62,7 +61,7 @@ class _AgeAndWeightState extends State<AgeAndWeight> {
                   FloatingActionButton(
                     onPressed: () {
                       setState(() {
-                        usersWeight++;
+                        AgeAndWeight.usersWeight++;
                       });
                     },
                     mini: true,
@@ -76,8 +75,8 @@ class _AgeAndWeightState extends State<AgeAndWeight> {
                   FloatingActionButton(
                     onPressed: () {
                       setState(() {
-                        if (usersWeight > 1) {
-                          usersWeight--;
+                        if (AgeAndWeight.usersWeight > 1) {
+                          AgeAndWeight.usersWeight--;
                         }
                       });
                     },
@@ -121,7 +120,7 @@ class _AgeAndWeightState extends State<AgeAndWeight> {
                 height: 4,
               ),
               Text(
-                usersAge.toString(),
+                AgeAndWeight.usersAge.toString(),
                 style: const TextStyle(color: Colors.white, fontSize: 18),
               ),
               Row(
@@ -130,7 +129,7 @@ class _AgeAndWeightState extends State<AgeAndWeight> {
                   FloatingActionButton(
                     onPressed: () {
                       setState(() {
-                        usersAge++;
+                        AgeAndWeight.usersAge++;
                       });
                     },
                     mini: true,
@@ -144,8 +143,8 @@ class _AgeAndWeightState extends State<AgeAndWeight> {
                   FloatingActionButton(
                     onPressed: () {
                       setState(() {
-                        if (usersAge > 1) {
-                          usersAge--;
+                        if (AgeAndWeight.usersAge > 1) {
+                          AgeAndWeight.usersAge--;
                         }
                       });
                     },
