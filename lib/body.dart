@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'height.dart';
 import 'age_and_weight.dart';
 
 class Body extends StatefulWidget {
@@ -16,6 +17,17 @@ class _BodyState extends State<Body> {
   final Color onPressedColor = Colors.redAccent;
   String userSex = 'male';
 
+  final BoxDecoration rowDecoration = const BoxDecoration(
+      color: Color.fromRGBO(35, 32, 32, 1),
+      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+      boxShadow: <BoxShadow>[
+        BoxShadow(
+          color: Color.fromRGBO(88, 88, 88, 0.9),
+          offset: Offset(2, 2),
+          blurRadius: 8,
+        )
+      ]);
+
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
@@ -26,23 +38,14 @@ class _BodyState extends State<Body> {
         // first row
 
         Container(
-          height: 140,
+          height: 160,
           child: Row(
             children: [
               //male button
               Flexible(
                 fit: FlexFit.tight,
                 child: Container(
-                  decoration: const BoxDecoration(
-                      color: Color.fromRGBO(35, 32, 32, 1),
-                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                      boxShadow: <BoxShadow>[
-                        BoxShadow(
-                          color: Color.fromRGBO(88, 88, 88, 0.9),
-                          offset: Offset(2, 2),
-                          blurRadius: 8,
-                        )
-                      ]),
+                  decoration: rowDecoration,
                   margin: const EdgeInsets.fromLTRB(8, 8, 4, 8),
                   padding: const EdgeInsets.all(20),
                   child: TextButton(
@@ -113,10 +116,13 @@ class _BodyState extends State<Body> {
           ),
         ),
 
-        // second row
+        // second row, height slider
         Container(
-          height: 140,
-          child: Row(),
+          decoration: rowDecoration,
+          margin: const EdgeInsets.all(8),
+          padding: const EdgeInsets.all(30),
+          height: 160,
+          child: const HeightSlider(),
         ),
 
         // third row
@@ -127,7 +133,7 @@ class _BodyState extends State<Body> {
 
         // forth row
         Container(
-          height: 140,
+          height: 120,
           color: Colors.purple,
           child: Row(),
         )
