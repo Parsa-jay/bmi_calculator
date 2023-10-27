@@ -4,13 +4,9 @@ import 'age_and_weight.dart';
 import 'sex-selection.dart';
 import 'app_decoration.dart';
 
-class Body extends StatefulWidget {
+class Body extends StatelessWidget {
   const Body({super.key});
-  @override
-  State<Body> createState() => _BodyState();
-}
 
-class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Column(
