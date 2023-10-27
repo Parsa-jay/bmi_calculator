@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               title: const Text('BMI CALCULATOR'),
+              toolbarHeight: MediaQuery.of(context).size.height * 0.1,
               centerTitle: true,
               backgroundColor: const Color.fromRGBO(58, 53, 53, 1),
               elevation: 2,
