@@ -2,21 +2,10 @@ import 'package:flutter/material.dart';
 import 'height.dart';
 import 'age_and_weight.dart';
 import 'sex-selection.dart';
+import 'app_decoration.dart';
 
 class Body extends StatefulWidget {
   const Body({super.key});
-
-  static const BoxDecoration rowDecoration = BoxDecoration(
-      color: Color.fromRGBO(35, 32, 32, 1),
-      borderRadius: BorderRadius.all(Radius.circular(8.0)),
-      boxShadow: <BoxShadow>[
-        BoxShadow(
-          color: Color.fromRGBO(88, 88, 88, 0.9),
-          offset: Offset(2, 2),
-          blurRadius: 8,
-        )
-      ]);
-
   @override
   State<Body> createState() => _BodyState();
 }
@@ -35,7 +24,7 @@ class _BodyState extends State<Body> {
 
         // second row, height slider
         Container(
-          decoration: Body.rowDecoration,
+          decoration: AppDecoration.rowDecoration,
           margin: const EdgeInsets.all(8),
           padding: const EdgeInsets.all(30),
           height: MediaQuery.of(context).size.height * 0.24,

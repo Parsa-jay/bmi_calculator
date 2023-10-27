@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'body.dart';
+import 'app_decoration.dart';
 
 class SexSelection extends StatefulWidget {
   const SexSelection({super.key});
@@ -25,7 +25,7 @@ class _SexSelectionState extends State<SexSelection> {
         Flexible(
           fit: FlexFit.tight,
           child: Container(
-            decoration: Body.rowDecoration,
+            decoration: AppDecoration.rowDecoration,
             margin: const EdgeInsets.fromLTRB(8, 8, 4, 8),
             padding: const EdgeInsets.all(20),
             child: TextButton(
