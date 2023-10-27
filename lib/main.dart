@@ -20,8 +20,10 @@ class MyApp extends StatelessWidget {
               title: const Text('BMI CALCULATOR'),
               toolbarHeight: MediaQuery.of(context).size.height * 0.1,
               centerTitle: true,
-              backgroundColor: AppDecoration.mainColor,
-              elevation: 2,
+              backgroundColor: AppDecoration.secondColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              elevation: 3,
             ),
             body: const Body(),
           );
