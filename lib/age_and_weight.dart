@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'app_decoration.dart';
 
 class AgeAndWeight extends StatefulWidget {
   const AgeAndWeight({super.key});
@@ -19,16 +20,7 @@ class _AgeAndWeightState extends State<AgeAndWeight> {
         Flexible(
           fit: FlexFit.tight,
           child: Container(
-            decoration: const BoxDecoration(
-                color: Color.fromRGBO(35, 32, 32, 1),
-                borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                boxShadow: <BoxShadow>[
-                  BoxShadow(
-                    color: Color.fromRGBO(88, 88, 88, 0.9),
-                    offset: Offset(2, 2),
-                    blurRadius: 8,
-                  )
-                ]),
+            decoration: AppDecoration.rowDecoration,
             margin: const EdgeInsets.fromLTRB(8, 8, 4, 8),
             padding: const EdgeInsets.all(20),
             child: Column(children: [
@@ -99,16 +91,7 @@ class _AgeAndWeightState extends State<AgeAndWeight> {
         Flexible(
           fit: FlexFit.tight,
           child: Container(
-            decoration: const BoxDecoration(
-                color: Color.fromRGBO(35, 32, 32, 1),
-                borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                boxShadow: <BoxShadow>[
-                  BoxShadow(
-                    color: Color.fromRGBO(88, 88, 88, 0.9),
-                    offset: Offset(2, 2),
-                    blurRadius: 8,
-                  )
-                ]),
+            decoration: AppDecoration.rowDecoration,
             margin: const EdgeInsets.fromLTRB(8, 8, 4, 8),
             padding: const EdgeInsets.all(20),
             child: Column(children: [

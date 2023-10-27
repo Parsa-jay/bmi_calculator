@@ -12,10 +12,8 @@ class SexSelection extends StatefulWidget {
 }
 
 class _SexSelectionState extends State<SexSelection> {
-  Color maleButtonColor = Colors.redAccent;
-  Color femaleButtonColor = Colors.white;
-  final Color sexButtonDefultColor = Colors.white;
-  final Color onPressedColor = Colors.redAccent;
+  Color maleButtonColor = AppDecoration.activeColor;
+  Color femaleButtonColor = AppDecoration.buttonColor;
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +30,8 @@ class _SexSelectionState extends State<SexSelection> {
               onPressed: () {
                 //button colors turns red, user sex change to male
                 setState(() {
-                  maleButtonColor = onPressedColor;
-                  femaleButtonColor = sexButtonDefultColor;
+                  maleButtonColor = AppDecoration.activeColor;
+                  femaleButtonColor = AppDecoration.buttonColor;
                   SexSelection.userSex = 'male';
                 });
               },
@@ -72,8 +70,8 @@ class _SexSelectionState extends State<SexSelection> {
               onPressed: () {
                 //button colors turns red, user sex change to female
                 setState(() {
-                  femaleButtonColor = onPressedColor;
-                  maleButtonColor = sexButtonDefultColor;
+                  femaleButtonColor = AppDecoration.activeColor;
+                  maleButtonColor = AppDecoration.buttonColor;
                   SexSelection.userSex = 'female';
                 });
               },

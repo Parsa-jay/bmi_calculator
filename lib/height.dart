@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'app_decoration.dart';
 
 /* this widget take users height with using a CupertinoSlider. min height is 120
 and max height is 240 */
@@ -38,7 +39,7 @@ class _HeightSliderState extends State<HeightSlider> {
                 });
               },
               value: HeightSlider.usersHeightValue,
-              activeColor: Colors.redAccent,
+              activeColor: AppDecoration.activeColor,
               min: 120,
               max: 240,
               divisions: 120,

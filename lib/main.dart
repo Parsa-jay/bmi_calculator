@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'body.dart';
+import 'app_decoration.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +15,12 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Builder(builder: (context) {
           return Scaffold(
+            backgroundColor: AppDecoration.mainColor,
             appBar: AppBar(
               title: const Text('BMI CALCULATOR'),
               toolbarHeight: MediaQuery.of(context).size.height * 0.1,
               centerTitle: true,
-              backgroundColor: const Color.fromRGBO(58, 53, 53, 1),
+              backgroundColor: AppDecoration.mainColor,
               elevation: 2,
             ),
             body: const Body(),
