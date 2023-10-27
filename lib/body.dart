@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
           decoration: AppDecoration.rowDecoration,
           margin: const EdgeInsets.all(8),
           padding: const EdgeInsets.all(30),
-          height: MediaQuery.of(context).size.height * 0.24,
+          height: MediaQuery.of(context).size.height * 0.22,
           child: const HeightSlider(),
         ),
 
