@@ -3,6 +3,7 @@ import 'height.dart';
 import 'age_and_weight.dart';
 import 'sex-selection.dart';
 import 'app_decoration.dart';
+import 'calculate_button.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -35,9 +36,8 @@ class Body extends StatelessWidget {
 
         // forth row
         Container(
-          height: MediaQuery.of(context).size.height * 0.15,
-          color: Colors.purple,
-          child: Row(),
+          height: MediaQuery.of(context).size.height * 0.12,
+          child: Calculation(),
         )
       ],
     );
